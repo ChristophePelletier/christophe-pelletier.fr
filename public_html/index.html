@@ -3,6 +3,7 @@
 
     <head>
         <meta charset="UTF-8" />
+    
         <meta http-equiv="X-UA-Compatible"
             content="IE=edge" />
         <meta name="viewport"
@@ -27,21 +28,39 @@
             rel="stylesheet">
         <link rel="stylesheet"
             href="pubic/css/main.css" />
+            <link rel="stylesheet"
+                href="pubic/css/normalize.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-F3D70KDBSN"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'G-F3D70KDBSN');
+</script>
     <body>
 
         <header>
             <div id="bandeau">
                 <div>
-                    <p><img src="images/carte.png" class="ecran"></p>
+                    <p><img alt=""
+                            src="images/carte.png"
+                            class="ecran"></p>
                 </div>
                 <div>
-                    <h1>Christophe Pelletier<br><span class="specialite">Développeur web - Graphiste</h1>
-                    <p class="contact">contact@christophe-pelletier.fr</p>
-                    <p class="linkedin"><a href="https://www.linkedin.com/in/christophe-pelletier-com/?originalSubdomain=fr"><img src="images/LI-In-Bug.png"/></a></p>
+                    <h1>Christophe Pelletier<br><span class="specialite">Développeur web - Graphiste</span></h1>
+                    <div id="contacts">
+                        <p class="contact">contact@christophe-pelletier.fr</p>
+
+                    </div>
                 </div>
                 <div>
-                    <p><img src="images/carte-2.png" class="ecran"></p>
+
+                    <p><img src="images/carte-2.png"
+                            alt=""
+                            class="ecran"></p>
                 </div>
             </div>
 
@@ -51,10 +70,10 @@
                         <li>Compétences</li>
                     </a>
                     <a href="#two">
-                        <li>Expérience</li>
+                        <li>Expériences</li>
                     </a>
                     <a href="#three">
-                        <li>Formation</li>
+                        <li>Formations</li>
                     </a>
                 </ul>
             </nav>
@@ -389,7 +408,7 @@
                             d'un intranet</li>
                         <li>Rédaction de la lettre
                             d’information hebdomadaire</li>
-                            <li> Conceptions et créations graphiques
+                        <li> Conceptions et créations graphiques
                             (affiches, brochures, logos, kakemonos...)</li>
                         <li>Prise de photographies
                             événementielles et institutionnelles</li>
@@ -439,41 +458,49 @@
                     </span></h2>
                 <div class="formation">
 
-                    <p>2022</p>
+                    <p class="date">2022</p>
                     <p>Développeur web
                     </p>
                 </div>
                 <div class="formation">
-                    <p>2002</p>
+                    <p class="date">2002</p>
                     <p>Doctorat en sciences de l’information et de la communication<br />
                         Mention très honorable avec félicitations<br />
                         Paris&nbsp;II, Institut Français de Presse (IFP)
                     </p>
                 </div>
                 <div class="formation">
-                    <p>1999</p>
+                    <p class="date">1999</p>
                     <p>DEA média et multimédia (IFP)
                     </p>
                 </div>
                 <div class="formation">
-                    <p>1998</p>
+                    <p class="date">1998</p>
                     <p>Maîtrise en sciences de l’information et de la communication (IFP)
                     </p>
                 </div>
                 <div class="formation">
-                    <p>1997</p>
+                    <p class="date">1997</p>
                     <p>Licence en sciences de l’information et de la communication (IFP)</p>
                 </div>
                 <div>
                     <div class="formation">
-                        <p>1996</p>
+                        <p class="date">1996</p>
                         <p>DEUG lettres et langues, Paris&nbsp;IV, CELSA</p>
                     </div>
                 </div>
             </section>
         </article>
+        <footer>
+            <p class="linkedin"><a
+                    href="https://www.linkedin.com/in/christophe-pelletier-com/?originalSubdomain=fr"><img
+                        src="images/LI-In-Bug.png"
+                        alt="" /></a></p>
+            <p class="github"><a href="https://github.com/ChristophePelletier"><img src="images/GitHub-Mark-64px.png"
+                        alt="" /></a></p>
+        </footer>
 
-       
+        
         <script>
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {

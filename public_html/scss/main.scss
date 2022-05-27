@@ -5,7 +5,6 @@ $primary-2: #ffaf49;
 $primary1: #fa8100;
 $primary2: #f47100;
 $primary3: #ee6002;
-
 $secondary: #6002ee;
 $secondary-1: #7e3ff2;
 $secondary-2: #9965f4;
@@ -15,18 +14,16 @@ $secondary2: #3d00e0;
 * {
 	box-sizing: border-box;
 }
-.evaluation {
-	color: black;
-}
 
 body {
-	padding:0 1em;
-	max-width: 1280px;
+	max-width: 70%;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0 1em;
 	font-family: "Roboto", sans-serif;
 	@media screen and (max-width: 980px) {
-		width: 95%;
+		width: 90%;
+		padding: 0;
 	}
 }
 
@@ -42,27 +39,31 @@ h2 {
 	justify-content: space-between;
 	align-items: center;
 	@media screen and (max-width: 980px) {
+		width: 95%;
 		flex-direction: column;
+		flex-wrap:wrap;
 		justify-content: center;
+		align-items: center;
 	}
 }
 
-header
-{
-	width:100%;
+header {
+	width: 100%;
+	@media screen and (max-width: 980px) {
+		width: 100%;
+	}
 }
 
-header p
-{
-	text-align:center;
+header p {
+	text-align: center;
 }
 
 #bandeau {
 	display: flex;
 	flex-direction: row;
-	align-items:center;
+	align-items: center;
 	justify-content: space-between;
-	width:100%;
+	width: 100%;
 	@media screen and (max-width: 980px) {
 		flex-direction: column;
 		justify-content: center;
@@ -70,23 +71,27 @@ header p
 	}
 }
 
-#bandeau div:first-child
-{
-	width: 33%;
-	
-}
-
-#bandeau div:nth-child(2)
-{
+#bandeau div:first-child {
 	width: 33%;
 	@media screen and (max-width: 980px) {
-		width:100%;
+		display: none;
+		width: 100%;
 	}
 }
 
-#bandeau div:nth-child(3)
-{
+#bandeau div:nth-child(2) {
 	width: 33%;
+	@media screen and (max-width: 980px) {
+		width: 100%;
+	}
+}
+
+#bandeau div:nth-child(3) {
+	width: 33%;
+	@media screen and (max-width: 980px) {
+		display: none;
+		width: 100%;
+	}
 }
 
 header div img.ecran {
@@ -96,9 +101,56 @@ header div img.ecran {
 	}
 }
 
+#contacts {
+	display: flex;
+	flex-direction: row;
+	width: 100% !important;
+	padding-left:0;
+	padding-right:0;
+	margin-left:0;
+	margin-right:0;
+	justify-content: space-around;
+	align-items: center !important;
+	@media screen and (max-width: 980px) {
+		flex-direction: column;
+		width: 95%;
+	}
+}
+
 p.contact {
 	font-size: 16px;
-	text-align:center;
+	text-align: center;
+	width: 70%;
+	@media screen and (max-width: 980px) {
+		text-align: center;
+		width: 95%;
+		margin-right: 0;
+	}
+}
+
+p.linkedin {
+	text-align: left;
+	width: 15%;
+	@media screen and (max-width: 980px) {
+		text-align: center;
+		width: 15%;
+		margin-right: 0;
+	}
+}
+
+p.github {
+	text-align: right;
+	width: 15%;
+	@media screen and (max-width: 980px) {
+		text-align: center;
+		width: 100%;
+		margin-right: 0;
+	}
+}
+
+p.github img,
+p.linkedin img {
+	max-height: 40px;
 }
 
 //navigation
@@ -106,6 +158,7 @@ nav {
 	display: none;
 	@media screen and (max-width: 980px) {
 		display: contents;
+		width: 95%;
 	}
 }
 
@@ -113,11 +166,11 @@ nav ul {
 	@media screen and (max-width: 980px) {
 		display: contents;
 		flex-direction: row;
-		width: 100%;
 		margin: 0;
 		padding: 0;
 		display: flex;
-		justify-content: space-between;
+		width: 100%;
+		justify-content: space-around;
 	}
 }
 
@@ -128,9 +181,11 @@ nav ul li {
 	width: 150px;
 	text-align: center;
 	padding: 0.8em;
+	margin-left: 0;
 	border-radius: 5px;
 	box-shadow: 1px 1px $primary3;
 	transition: all 0.5s;
+	background-color: $primary-1;
 }
 
 nav ul li:hover {
@@ -153,7 +208,6 @@ li::before {
 	width: 1em;
 	margin-left: -1em;
 }
-
 
 .specialite {
 	font-size: 20px !important;
@@ -179,21 +233,23 @@ nav ul {
 	}
 }
 
-
-nav ul li{
+nav ul li {
 	@media screen and (max-width: 630px) {
 		margin-bottom: 0.5em;
 	}
 }
 
-
 article {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: no-wrap;
 	justify-content: space-around;
 	@media screen and (max-width: 980px) {
+		width: 95%;
 		flex-direction: column;
+		flex-wrap:wrap;
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
 	}
 }
 
@@ -211,22 +267,26 @@ section {
 	padding: 0.8em;
 	border: 1px;
 	@media screen and (max-width: 980px) {
-		width: 100%;
-		margin-left: 0;
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
 section#one {
 	margin-left: 0;
 	@media screen and (max-width: 980px) {
-		width: 100%;
-		margin-left: 0;
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
 section > div {
 	display: flex;
 	flex-direction: column;
+	flex-wrap:wrap;
+	width: 100%;
 }
 
 h3.web {
@@ -261,9 +321,9 @@ h3.web {
 	padding-bottom: 0;
 }
 
-article section p.debut
-{
-	margin-top:0;
+
+article section#two p.debut {
+	margin-top: 0 !important;
 }
 
 article section p.date {
@@ -273,6 +333,10 @@ article section p.date {
 	margin-block-start: 0em;
 	margin-block-end: 0em;
 	font-style: italic;
+}
+
+article section#three p.date {
+	margin-top: 0 !important;
 }
 p.employeur {
 	font-weight: 600;
@@ -284,22 +348,9 @@ p.fonction {
 	padding-bottom: 0;
 }
 
-p.linkedin img
-{
-max-width:40px;
-opacity:0.7;
-transition:all, 0.5s ease-in-out;
-}
-
-p.linkedin img:hover
-{
-cursor:pointer;
-opacity:1;
-}
-
 h3 {
 	margin-top: 2em;
-	margin-bottom:0.5em;
+	margin-bottom: 0.5em;
 	padding-top: 0;
 	font-size: 18px;
 	font-weight: bold;
@@ -310,9 +361,9 @@ h3 {
 }
 
 span.size-18 {
-  font-size: 18px;
-  font-variation-settings: 'OPSZ' 18;
-  color:$primary-2;
+	font-size: 18px;
+	font-variation-settings: "OPSZ" 18;
+	color: $primary-2;
 }
 
 ul,
@@ -327,13 +378,53 @@ li {
 	align-items: top;
 	margin: 0;
 	padding: 0;
+
 	@media screen and (max-width: 980px) {
 		flex-direction: column;
+		width: 95%;
 	}
 }
 
 .formation p:first-child {
 	padding-right: 1em;
+}
+
+footer {
+	margin-top: 1em;
+	width: 32%;
+	background-color: $primary-2;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	@media screen and (max-width: 980px) {
+		width: 95%;
+	}
+}
+
+p.linkedin {
+	@media screen and (max-width: 980px) {
+		text-align: right;
+		padding-right: 1em;
+		width: 50%;
+	}
+}
+p.github {
+	@media screen and (max-width: 980px) {
+		text-align: left;
+		padding-left: 1em;
+		width: 50%;
+	}
+}
+p.linkedin img,
+p.github img {
+	margin-top: 1em;
+	max-width: 40px;
+	opacity: 0.7;
+	transition: all, 0.5s ease-in-out;
 }
 
 //animation
@@ -399,9 +490,3 @@ li {
 		opacity: 1;
 	}
 }
-
-footer
-{width:100%;
-margin-top:1em;
-background-color:$primary-2;
-border-radius:5px;}
