@@ -16,7 +16,7 @@ $secondary2: #3d00e0;
 }
 
 body {
-	max-width: 70%;
+	max-width: 1280px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 1em;
@@ -375,6 +375,7 @@ li {
 .formation {
 	display: flex;
 	flex-direction: row;
+	flex-wrap:nowrap;
 	align-items: top;
 	margin: 0;
 	padding: 0;
@@ -489,4 +490,9 @@ p.github img {
 	to {
 		opacity: 1;
 	}
+}
+
+p strong
+{
+color:black;
 }
