@@ -7,7 +7,7 @@ body {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1em;
+  padding: 0;
   font-family: "Roboto", sans-serif;
 }
 @media screen and (max-width: 980px) {
@@ -519,6 +519,94 @@ p.github img {
 }
 p strong {
   color: black;
+}
+
+form {
+  display: flex;
+  background-color: #5300e8;
+  padding: 2em;
+  flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 980px) {
+  form {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+form > div {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid white;
+  margin-left: 1em;
+  width: 100%;
+  padding: 1em;
+  background-color: #ee6002;
+}
+@media screen and (max-width: 980px) {
+  form > div {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+form > div > div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #351b7d;
+  margin-left: 1em;
+  width: 100%;
+  padding: 1em;
+  background-color: red;
+}
+
+form > div:nth-child(2) {
+  background-color: #7a7290;
+}
+
+form > div:nth-child(2) p {
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+
+input {
+  background-color: #ff8d00;
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+form div div p {
+  display: flex;
+}
+
+form input:not([type=submit]) {
+  flex: 1;
+}
+
+form label {
+  width: 120px;
+}
+
+textarea {
+  flex: 1;
+}
+
+h2 {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 25px;
+  background-color: pink;
+  color: red;
 }
 
 /*# sourceMappingURL=main.css.map */
